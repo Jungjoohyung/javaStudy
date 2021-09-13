@@ -22,5 +22,5 @@ public class MovieTest {
 		m.print();
 
 		//add comment by Nersion
-	}
+//±ô¸ð
 }
