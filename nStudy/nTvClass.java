@@ -157,14 +157,6 @@ public class Tv {
 
 public class TvQuiz {
 	
-	public powerOnOff(Tv t) {
-		if (t.power == true ) {
-			println("asdfasdf");
-		} else {
-			println("asdfasdf");
-		}
-	}
-	
 	public static void main(String[] args) {
 		
 		
