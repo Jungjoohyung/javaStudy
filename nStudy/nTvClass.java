@@ -5,7 +5,8 @@
 	메서드 - 소리, 채널 , 전원
 */
 
-public class Tv {
+//이거.. 원래는 이렇게 자바파일 하나에 쑤시면 안되겠지?? 걍 이건 스터디니까 이렇게 하고있는거지?
+class Tv {
 	
 	//enum list (열거형인데.. 이거 안배웠으려나??) 안배웠다면..... int 나 short  정도로 대충 생각하고 HD = 0, FHD = 1 ... 이런식으로 생각해도됨.
 	//다만 이걸 안배웠다면 뭔가 초기에 내가 생각했던 퀄리티와 컬러가 아닌 경우를 생각해서 에러를 뱉어주던지 보정하던지 추가 작업을 해줘야 할꺼임.
@@ -153,14 +154,27 @@ public class Tv {
 		
 		System.out.printf("Volume : %d 입니당\n", volume);
 	}
+	
+	//이건 있어야할까..? 그냥 테스트용으로 하나 만듦.. 이유없음
+	public void checkTvStat() {
+		System.out.printf("TV Power : %b\n", power);
+		System.out.printf("Color : %s\n", color.name());
+		System.out.printf("Quality : %s\n", quality.name());
+		System.out.printf("Channel : %d\n", channel);
+		System.out.printf("Volume : %d\n", volume);
+	}
+	
 } 
 
-public class TvQuiz {
+public class nTvClass {
 	
 	public static void main(String[] args) {
 		
 		
 		//TODO ...
+		
+		Tv a = new Tv(Tv.Color.CRT);
+		a.checkTvStat();
 		
 	}
 }
