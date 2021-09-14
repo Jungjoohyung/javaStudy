@@ -8,7 +8,19 @@ class Tv {
 	int channel;
 	int volume;
 	String color;
-
+	
+	/* 
+	   power variable state change action must be declared.
+	   e.g) someone can change power variable state.
+	   like this.
+	   if(power==true) {
+	   		power=false;
+	   		System.out.println("Tv Power Off");
+	   } else {
+	    	power=true;
+	    	System.out.println("Tv Power On");
+	   }
+	*/
 	void powerOnOff(){
 		if(power==true){
 			System.out.println("ON");
@@ -18,6 +30,7 @@ class Tv {
 	
 	}
 
+	//need arguments. e.g) boolean cahnnelNum(int num) ... 
 	void channelNum(){
 		if(power==true){
 			System.out.println(getInfo() + "Ã¤³Î" + channel + "¸¦ Æµ´Ï´Ù.");
@@ -26,6 +39,7 @@ class Tv {
 		}
 	}
 
+	//need to change... similar to boolean channelNum(int num)...
 	void volumeNum(){
 		if(power==true){
 			System.out.println(getInfo() + "º¼·ýÀ» " + volume + "·Î ¸ÂÃä´Ï´Ù.");
