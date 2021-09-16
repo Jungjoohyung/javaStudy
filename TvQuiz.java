@@ -22,17 +22,19 @@ class Tv {
 	   }
 	*/
 	void powerOnOff(){
-		if(power==true){
+		if(power){
+			power=false;
 			System.out.println("ON");
 		}else{
+			power=true;
 			System.out.println("Off");
 		}
 	
 	}
 
 	//need arguments. e.g) boolean cahnnelNum(int num) ... 
-	void channelNum(){
-		if(power==true){
+	void channelNum(int num){
+		if(power){
 			System.out.println(getInfo() + "채널" + channel + "를 틉니다.");
 		}else{
 			System.out.println("티비가 꺼져있습니다.");
@@ -40,8 +42,8 @@ class Tv {
 	}
 
 	//need to change... similar to boolean channelNum(int num)...
-	void volumeNum(){
-		if(power==true){
+	void volumeNum(int num){
+		if(power){
 			System.out.println(getInfo() + "볼륨을 " + volume + "로 맞춥니다.");
 		}else{
 			System.out.println("티비가 꺼져있습니다.");
@@ -59,12 +61,10 @@ public class TvQuiz {
 		
 		Tv t = new Tv();
 		t.power = false;
-		t.channel = 34;
-		t.volume = 27;
 		t.color = "은색";
 		t.powerOnOff();
-		t.channelNum();
-		t.volumeNum();
+		t.channelNum(23);
+		t.volumeNum(21);
 		
 	}
 }
