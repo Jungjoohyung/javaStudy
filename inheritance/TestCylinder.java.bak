@@ -1,0 +1,77 @@
+class Circle {
+	
+	private double radius; 
+	private String color;
+	//생성자
+	public Circle(){
+	
+	}
+	public Circle(double radius){
+		super();
+		this.radius = radius;
+	}
+	//getter
+	public double getRadius(){
+		return radius;
+	}
+	public String getColor(){
+		return color;
+	}
+	//setter
+	public void setRaius(double radius){
+		this.radius = radius;
+	}
+	public void setColor(){
+		this.color = color;
+	}
+	
+	public double getArea(){
+		return 3.14 * radius * radius;
+	}
+	public String toString(){
+		return "반지름: " + radius + ", 원의 넓이:" +getArea();
+	}
+}
+class Cylinder extends Circle{
+	private double height;
+	
+	public Cylinder(){
+		
+	}
+	
+	public Cylinder(double radius){
+		super(radius);
+	}
+	Cylinder(double radius, double height){
+		super(radius);
+		this.height = height;
+	}
+
+	public double getHeight(){
+		return height;
+	}
+	public double getVolume(){
+		return super.getArea()*this.height;
+	}		
+}
+		
+class TestCylinder {
+	public static void main(String[] args)	{
+		//obj1객체 생성
+		Cylinder obj1 = new Cylinder();
+		//모든속성 호출
+		System.out.println(obj1.getRadius());
+		System.out.println(obj1.getArea());
+		System.out.println(obj1.getHeight());
+		System.out.println(obj1.getVolume());
+		//obj2객체생성
+		Cylinder obj2 = new Cylinder(5.0,3.0);
+		//모든속성 호출
+		System.out.println(obj2.getRadius());
+		System.out.println(obj2.getArea());
+		System.out.println(obj2.getHeight());
+		System.out.println(obj2.getVolume());
+	
+
+	}
+}
